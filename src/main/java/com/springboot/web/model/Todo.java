@@ -2,28 +2,41 @@ package com.springboot.web.model;
 
 import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import javax.validation.constraints.Size;
 
+import org.springframework.beans.factory.annotation.Autowired;
+@Entity
+//Todo : Implement user that stores a list of todos
+@Table(name = "TODOS")
 public class Todo {
+	@Id
+	@GeneratedValue
     private int id;
+	@Column(name = "USER")
     private String user;
     
     @Size(min=10, message="Enter at least 10 Characters...")
-    private String desc;
+    private String description;
 
     private Date targetDate;
     private boolean isDone;
-
+    @Autowired
     public Todo() {
     		super();
     }
-    
-    public Todo(int id, String user, String desc, Date targetDate,
+    @Autowired
+    public Todo(int id, String user, String description, Date targetDate,
             boolean isDone) {
         super();
         this.id = id;
         this.user = user;
-        this.desc = desc;
+        // had to change from desc to description because desc is a method in jpa
+        this.description = description;
         this.targetDate = targetDate;
         this.isDone = isDone;
     }
@@ -44,12 +57,12 @@ public class Todo {
         this.user = user;
     }
 
-    public String getDesc() {
-        return desc;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDesc(String desc) {
-        this.desc = desc;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public Date getTargetDate() {
@@ -98,7 +111,7 @@ public class Todo {
     public String toString() {
         return String.format(
                 "Todo [id=%s, user=%s, desc=%s, targetDate=%s, isDone=%s]", id,
-                user, desc, targetDate, isDone);
+                user, description, targetDate, isDone);
     }
 
 }

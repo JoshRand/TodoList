@@ -1,7 +1,7 @@
 <html>
 
 <head>
-<title>First Web Application</title>
+<title>ToDoList Application</title>
 </head>
 
 <body>

@@ -5,13 +5,19 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
+import com.springboot.web.dao.TodoDao;
 import com.springboot.web.model.Todo;
-
+@Component
 @Service
 public class TodoService {
-    private static List<Todo> todos = new ArrayList<Todo>();
+	@Autowired
+	TodoDao todoDao;
+	
+	private static List<Todo> todos = new ArrayList<Todo>();
     private static int todoCount = 3;
 
     static {
@@ -48,7 +54,7 @@ public class TodoService {
 
     public void addTodo(String name, String desc, Date targetDate,
             boolean isDone) {
-        todos.add(new Todo(++todoCount, name, desc, targetDate, isDone));
+        todoDao.addTodo(new Todo(++todoCount, name, desc, targetDate, isDone));
     }
 
     public void deleteTodo(int id) {
