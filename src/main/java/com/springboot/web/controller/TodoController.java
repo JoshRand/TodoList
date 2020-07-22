@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.springboot.web.model.Todo;
@@ -45,7 +46,7 @@ public class TodoController {
 
 	@RequestMapping(value = "/add-todo", method = RequestMethod.GET)
 	public String showAddTodoPage(ModelMap model) {
-		model.addAttribute("todo", new Todo(0, (String) model.get("name"),
+		model.addAttribute("todo", new Todo((String) model.get("name"),
 				"Default Desc", new Date(), false));
 		return "todo";
 	}
@@ -55,14 +56,14 @@ public class TodoController {
 		service.deleteTodo(id);
 		return "redirect:/list-todos";
 	}
-
+	//@ResponseBody
 	@RequestMapping(value = "/update-todo", method = RequestMethod.GET)
 	public String showUpdateTodoPage(@RequestParam int id, ModelMap model) {
 		Todo todo = service.retrieveTodo(id);
 		model.put("todo", todo);
 		return "todo";
 	}
-
+	
 	@RequestMapping(value = "/update-todo", method = RequestMethod.POST)
 	public String updateTodo(ModelMap model, @Valid Todo todo,
 			BindingResult result) {

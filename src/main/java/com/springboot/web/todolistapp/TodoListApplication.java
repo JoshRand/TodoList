@@ -1,4 +1,4 @@
-package com.springboot.web.springbootfirstwebapp;
+package com.springboot.web.todolistapp;
 
 import java.util.Locale;
 
@@ -16,10 +16,10 @@ import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 @EntityScan(basePackages = "com.springboot.web.model")
 @ComponentScan(basePackages="com")
 @EnableJpaRepositories(basePackages = "com.springboot.web.repo")
-public class SpringbootFirstwebappApplication {
+public class TodoListApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringbootFirstwebappApplication.class, args);
+		SpringApplication.run(TodoListApplication.class, args);
 	}
 	@Bean
 	public LocaleResolver localeResolver()

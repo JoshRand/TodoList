@@ -30,10 +30,10 @@ public class Todo {
     		super();
     }
     @Autowired
-    public Todo(int id, String user, String description, Date targetDate,
+    public Todo(String user, String description, Date targetDate,
             boolean isDone) {
         super();
-        this.id = id;
+        //this.id = id;
         this.user = user;
         // had to change from desc to description because desc is a method in jpa
         this.description = description;
