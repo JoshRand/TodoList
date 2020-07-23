@@ -49,18 +49,6 @@ public class TodoController {
 		
 		return "welcome";
 	}
-	@ResponseBody
-	@RequestMapping(value = "/registration-page", method = RequestMethod.GET)
-	public String showRegistration(ModelMap model) {
-		
-		return "registration";
-	}
-	@ResponseBody
-	@RequestMapping(value = "/account-details", method = RequestMethod.GET)
-	public String showAccountDetails(ModelMap model) {
-		
-		return "account-details";
-	}
 
 	@RequestMapping(value = "/add-todo", method = RequestMethod.GET)
 	public String showAddTodoPage(ModelMap model) {

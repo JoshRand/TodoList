@@ -35,7 +35,7 @@
 
 	
 	</form>
-	<a style="margin-left: 30px" >Don't have an account?</a><a href="registration-page" style="margin-left: 10px">Click Here</a>
+	<a style="margin-left: 30px" >Don't have an account?</a><a href="registration-page" style="margin-left: 10px">Register Here</a>
 	
 </body>
 
