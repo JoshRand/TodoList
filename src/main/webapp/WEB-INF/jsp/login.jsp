@@ -5,14 +5,25 @@
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
 </head>
 
-<body style="background:silver">
-	
-	<h1 style="margin-left: 20px" style="margin-top:20px">Welcome to the Login page</h1>
+
+
+<!-- <h1 style="margin-left: 20px" style="margin-top:20px">Welcome to the Login page</h1>
 	<h4 style="margin-left: 40px">Please login to view Todos</h4>
-	<form method="post" class="form-inline" style="padding: 20px">
-		
+	 -->
+
+<body style="background:white">
+	
+	<div style="background:#343a40" >
+		<h1 style="margin-left: 20px;color: silver">Welcome to the Login page</h1>
+		<h4 style="margin-left: 40px;color: silver">Please login to view Todos</h4>
+		</br>
+	
+	</div>
+		<form method="post" class="form-inline" style="padding: 20px">
 		
 		<h6 style="margin-left: 10px" ><u>Name :</u></h6> <input type="text" name="name" placeholder="Enter Username" style="margin-left: 10px"/>
 	
@@ -24,7 +35,7 @@
 
 	
 	</form>
-
+	<a style="margin-left: 30px" >Don't have an account?</a><a href="registration-page" style="margin-left: 10px">Click Here</a>
 	
 </body>
 
