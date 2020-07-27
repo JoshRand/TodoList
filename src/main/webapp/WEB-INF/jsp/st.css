@@ -1,0 +1,17 @@
+body {
+ 
+	background-color: rgb(88, 88, 88);
+ 
+}
+
+.navbar-nav>li {
+	border-right: 1px solid #000;
+	border-color: silver;
+}
+td {
+	border-right: 5px solid #000;
+	border-color: silver;
+}
+.navbar-nav>li:last-child {
+	border: none;
+}

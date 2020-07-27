@@ -9,13 +9,22 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <style>
-.navbar-nav>li{
-  border-right: 1px solid #000;
-  border-color: silver;
+body {
+ 
+	background-color: rgb(88, 88, 88);
+ 
 }
 
-.navbar-nav>li:last-child{
-   border: none;
+.navbar-nav>li {
+	border-right: 1px solid #000;
+	border-color: silver;
+}
+td {
+	border-right: 5px solid #000;
+	border-color: silver;
+}
+.navbar-nav>li:last-child {
+	border: none;
 }
 </style>
 
@@ -34,14 +43,11 @@
       <a class="nav-link" href="/list-todos">View Todos</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="/account-details">Account Details</a>
+      <a class="nav-link" href="/account-details?name=${name}">Account Details</a>
     </li>
     <li class="nav-item">
       <a class="nav-link disabled" href="#">Disabled</a>
     </li>
-    
-     
-    
   </ul>
   <a style="color: silver;" >Signed in as ${name}</a>
    <a class="nav-link" href="/logout">Logout</a>

@@ -1,9 +1,0 @@
-@charset "ISO-8859-1";
-.navbar-nav>li{
-  border-right: 1px solid #000;
-  border-color: silver;
-}
-
-.navbar-nav>li:last-child{
-   border: none;
-}

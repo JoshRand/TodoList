@@ -9,5 +9,7 @@ public interface UserDao
 	public void saveUser(User user);
 	public void deleteUser(int id);
 	public List<User> findAllUsers();
+	public User currentUser(String userName);
+	
 	
 }

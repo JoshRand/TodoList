@@ -7,7 +7,31 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Registration page</title>
+<style>
+u {
+	color:white;
 
+
+}
+
+body {
+ 
+	background-color: rgb(88, 88, 88);
+ 
+}
+
+.navbar-nav>li {
+	border-right: 1px solid #000;
+	border-color: silver;
+}
+td {
+	border-right: 5px solid #000;
+	border-color: silver;
+}
+.navbar-nav>li:last-child {
+	border: none;
+}
+</style>
 <link
 	href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
 	rel="stylesheet" id="bootstrap-css">
@@ -17,7 +41,7 @@
 	src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 </head>
-<body style="background: white">
+<body style="background-color: rgb(88, 88, 88)">
 
 	<div style="background: #343a40">
 		<h1 style="margin-left: 20px; color: silver">Welcome to the
@@ -60,8 +84,8 @@
 		<font color="red">${errorMessage}</font>
 
 	</form:form>
-	<a style="margin-left: 30px">Already have an account?</a>
-	<a href="login" style="margin-left: 10px">Login Here</a>
+	<a style="margin-left: 30px;color:white;">Already have an account?</a>
+	<a href="login" style="margin-left: 10px;color:yellow">Login Here</a>
 
 </body>
 </html>

@@ -8,5 +8,5 @@ import com.springboot.web.model.User;
 @Repository("UserRepo")
 public interface UserRepo extends CrudRepository<User,Integer>
 {
-	
+	public User findByUserName(String user_name);
 }

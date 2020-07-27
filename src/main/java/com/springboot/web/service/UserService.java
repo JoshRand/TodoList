@@ -15,5 +15,5 @@ public interface UserService
 	public void findUserById(int id);
 	void addUser(User user);
 	boolean userExists(String name);
-	
+	public User findUserByName(String userName);
 }

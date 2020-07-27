@@ -50,4 +50,14 @@ public class UserServiceImpl implements UserService
 		return false;
 	}
 
+	@Override
+	public User findUserByName(String userName)
+	{
+		User user = userDao.currentUser(userName);
+		// TODO Auto-generated method stub
+		
+		
+		return user;
+	}
+
 }

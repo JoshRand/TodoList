@@ -38,4 +38,15 @@ public class UserDaoImpl implements UserDao
 		return (List<User>)userRepo.findAll();
 	}
 
+	@Override
+	public User currentUser(String userName)
+	{
+		System.out.println(userName);
+		User user = userRepo.findByUserName(userName);
+		System.out.println(user);
+		
+		// TODO Auto-generated method stub
+		return user;
+	}
+
 }
