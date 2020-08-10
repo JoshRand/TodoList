@@ -1,23 +1,43 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-
-<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
-<!DOCTYPE html>
 <html>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <head>
+
 <meta charset="ISO-8859-1">
 <title>Registration page</title>
 <style>
+
 u {
 	color:white;
-
-
 }
 
 body {
+ /*black or silver, which is best*/
+  /*  background-color: rgb(88, 88, 88);*/
+  background-color: rgb(88, 88, 88); /* For browsers that do not support gradients */
+  background-image: linear-gradient(-45deg,rgb(88, 88, 88),black); /* Standard syntax (must be last) */
+  background-size: 800%;
+  -webkit-animation-name: change;
+  -webkit-animation-duration: 15s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
  
-	background-color: rgb(88, 88, 88);
- 
+}
+@-webkit-keyframes change {
+	/* 0% {background-position: 0 50%;} 
+	50% {background-position: 100% 50%;}
+	100% {background-position: 0 50%;}
+	 */
+	  from {
+   background-position: 20%;
+ }
+ to {
+   background-position: 60%;
+ }
+} 
+div{
+position: relative;
 }
 
 .navbar-nav>li {
@@ -48,7 +68,8 @@ td {
 			Registration Page</h1>
 		<h4 style="margin-left: 40px; color: silver">Fill in the required
 			fields</h4>
-		</br>
+			<br>
+		
 
 	</div>
 	<form:form method="post" modelAttribute="user" 
@@ -78,8 +99,8 @@ td {
 			placeholder="Enter Username" style="margin-left: 10px" />
 			
 		<br>
-
-		<input type="submit" style="margin-left: 10px" />
+		<br>
+		<input type="submit" class="btn btn-warning" style="margin-left: 10px" />
 
 		<font color="red">${errorMessage}</font>
 

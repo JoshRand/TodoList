@@ -6,12 +6,7 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <style>
-body {
- /*black or silver, which is best*/
-  /*  background-color: rgb(88, 88, 88);*/
-  background-color: rgb(88, 88, 88); /* For browsers that do not support gradients */
-  background-image: linear-gradient(rgb(88, 88, 88),black); /* Standard syntax (must be last) */
-}
+
 
 .navbar-nav>li {
 	border-right: 1px solid #000;
@@ -23,6 +18,34 @@ td {
 }
 .navbar-nav>li:last-child {
 	border: none;
+}
+
+body {
+ /*black or silver, which is best*/
+  /*  background-color: rgb(88, 88, 88);*/
+  background-color: rgb(88, 88, 88); /* For browsers that do not support gradients */
+  background-image: linear-gradient(-45deg,rgb(88, 88, 88),black); /* Standard syntax (must be last) */
+  background-size: 800%;
+  -webkit-animation-name: change;
+  -webkit-animation-duration: 15s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+ 
+}
+@-webkit-keyframes change {
+	/* 0% {background-position: 0 50%;} 
+	50% {background-position: 100% 50%;}
+	100% {background-position: 0 50%;}
+	 */
+	  from {
+   background-position: 20%;
+ }
+ to {
+   background-position: 60%;
+ }
+} 
+div{
+position: relative;
 }
 </style>
 
@@ -47,8 +70,8 @@ td {
 		<h6 style="margin-left: 10px; color:white" ><u>Name :</u></h6> <input type="text" name="name" placeholder="Enter Username" style="margin-left: 10px"/>
 	
 		<h6 style="margin-left: 10px; color:white"><u>Password :</u></h6> <input type="password" name="password" placeholder="Enter Password" style="margin-left: 10px"/><br> 
-	
-		<input type="submit"  style="margin-left: 10px"/>
+		</br>
+		<input type="submit" class= "btn btn-warning"style="margin-left: 10px"/>
 	
 		<font color="red">${errorMessage}</font> 
 

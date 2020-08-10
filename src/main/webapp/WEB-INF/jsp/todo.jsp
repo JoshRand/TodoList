@@ -10,9 +10,31 @@
 
 <style>
 body {
+ /*black or silver, which is best*/
+  /*  background-color: rgb(88, 88, 88);*/
+  background-color: rgb(88, 88, 88); /* For browsers that do not support gradients */
+  background-image: linear-gradient(-45deg,rgb(88, 88, 88),black); /* Standard syntax (must be last) */
+  background-size: 800%;
+  -webkit-animation-name: change;
+  -webkit-animation-duration: 15s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
  
-	background-color: rgb(88, 88, 88);
- 
+}
+@-webkit-keyframes change {
+	/* 0% {background-position: 0 50%;} 
+	50% {background-position: 100% 50%;}
+	100% {background-position: 0 50%;}
+	 */
+	  from {
+   background-position: 20%;
+ }
+ to {
+   background-position: 60%;
+ }
+} 
+div{
+position: relative;
 }
 
 .navbar-nav>li {
@@ -25,6 +47,10 @@ td {
 }
 .navbar-nav>li:last-child {
 	border: none;
+}
+b{
+	color:silver;
+
 }
 </style>
 
@@ -52,7 +78,8 @@ td {
   <a style="color: silver;" >Signed in as ${name}</a>
    <a class="nav-link" href="/logout">Logout</a>
 </nav>
-
+<br/>
+<br/>
 	<div class="container">
 
 
